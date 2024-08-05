@@ -4,11 +4,8 @@ const debug = Debug('egm_server:util:mailutil')
 // const aws = require('aws-sdk')
 import aws from 'aws-sdk'
 aws.config.update({
-	// accessKeyId: process.env.AWS_SES_KEY_ID,
-	// secretAccessKey: process.env.AWS_SES_ACCESS_KEY,
-
-    accessKeyId: 'AKIASDPEQVPS4B3GNZ7L',
-	secretAccessKey: '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',
+	accessKeyId: process.env.AWS_SES_KEY_ID,
+	secretAccessKey: process.env.AWS_SES_ACCESS_KEY,
 	region: 'ap-northeast-2',
 })
 
