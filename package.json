@@ -1,12 +1,12 @@
 {
-  "name": "ankichampion_svr",
+  "name": "marketplace_svr",
   "version": "0.3.5",
   "main": "app.js",
   "author": "jjk@beyondapp.com",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "DEBUG=ankichampion:*, NODE_ENV=dev node app.js",
+    "dev": "DEBUG=marketplace:*, NODE_ENV=dev node app.js",
     "deploy": "pm2 deploy ecosystem.config.cjs production update",
     "setup": "pm2 deploy production setup",
     "test": "vitest",

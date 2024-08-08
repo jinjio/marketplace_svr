@@ -1,5 +1,5 @@
 import Debug from 'debug'
-const debug = Debug('ankichampion:routes:challenge')
+const debug = Debug('marketplace:routes:challenge')
 
 import express from 'express'
 const router = express.Router()

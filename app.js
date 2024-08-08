@@ -1,7 +1,7 @@
 import 'dotenv/config'
 
 import Debug from 'debug'
-const debug = Debug('ankichampion:app')
+const debug = Debug('marketplace:app')
 
 // init express
 import packagejson from './package.json' assert { type: 'json'}
@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 
 app.get('/', function (req, res, next) {
   res.send({
-    app: 'ankichampion',
+    app: 'marketplace',
     now: new Date(),
     ver: packagejson.version,
   })
@@ -57,6 +57,12 @@ app.use('/payment', payment_route)
 
 console.log('DEBUG', process.env.DEBUG)
 
+app.use((req, res, next) => {
+  console.log(`Request received: ${req.method} ${req.url}`)
+  next()
+})
+
+
 app.use(function (err, req, res, next) {
   console.error(err.stack)
   res.status(500).json({ message: err.message })
@@ -74,8 +80,8 @@ export default app
 
 
 
-import ws_server from './websocket/ws_server.js'
-ws_server.getInstance(httpServer)
+// import ws_server from './websocket/ws_server.js'
+// ws_server.getInstance(httpServer)
 
 
 
@@ -92,7 +98,7 @@ const vapidKeys = {
 }
 
 webpush.setVapidDetails(
-  'mailto:support@ankichampion.com',
+  'mailto:support@marketplace.com',
   vapidKeys.publicKey,
   vapidKeys.privateKey
 )

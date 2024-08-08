@@ -1,5 +1,5 @@
 import Debug from 'debug'
-const debug = Debug('ankichampion:routes:api_key')
+const debug = Debug('marketplace:routes:api_key')
 
 import express from 'express'
 const router = express.Router()
