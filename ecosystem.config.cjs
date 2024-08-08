@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'ankichampion_svr',
+      name: 'marketplace_svr',
       script: 'app.js',
       instances: 1,
       autorestart: true,
@@ -10,7 +10,7 @@ module.exports = {
       env_production: {
         watch: false,
         NODE_ENV: 'production',
-        DEBUG: 'ankichampion:*',
+        DEBUG: 'marketplace:*',
         DEBUG_FD: 1,
         PORT: 9099,
       },
