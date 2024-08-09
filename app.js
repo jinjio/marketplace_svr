@@ -88,8 +88,8 @@ httpServer.listen(PORT, () => {
 
 
 
-// import ws_server from './websocket/ws_server.js'
-// ws_server.getInstance(httpServer)
+import ws_server from './websocket/ws_server.js'
+ws_server.getInstance(httpServer)
 
 
 
