@@ -69,14 +69,14 @@ app.use(function (err, req, res, next) {
   // next(err, req, res, next)
 })
 
-import http from 'http'
-const httpServer = http.createServer(app)
-const PORT = 9099 || process.env.PORT
-httpServer.listen(PORT, () => {
-  debug(`🚀 AnkiChampion server ready at http://localhost:${PORT}`)
-})
+// import http from 'http'
+// const httpServer = http.createServer(app)
+// const PORT = 9099 || process.env.PORT
+// httpServer.listen(PORT, () => {
+//   debug(`🚀 AnkiChampion server ready at http://localhost:${PORT}`)
+// })
 
-// export default app
+export default app
 
 
 
