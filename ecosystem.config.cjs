@@ -23,8 +23,9 @@ module.exports = {
       user: 'ubuntu',
       ref: 'origin/main',
       repo: 'git@github.com:jinjio/marketplace_svr.git',
-      path: '/home/ubuntu/marketplace_svr',
       'post-deploy': 'yarn install && pm2 reload ecosystem.config.cjs --env production',
+      'pre-setup': 'echo "This is a pre-setup command"',
+      'post-setup': 'echo "This is a post-setup command"',
       key: '/Users/checkx/Documents/marketplace.pem',  
     }
   }
