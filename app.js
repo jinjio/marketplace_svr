@@ -69,14 +69,22 @@ app.use(function (err, req, res, next) {
   // next(err, req, res, next)
 })
 
-// import http from 'http'
-// const httpServer = http.createServer(app)
-// const PORT = 9099 || process.env.PORT
-// httpServer.listen(PORT, () => {
-//   debug(`🚀 AnkiChampion server ready at http://localhost:${PORT}`)
-// })
+import http from 'http'
+const httpServer = http.createServer(app)
+const PORT = 9099 || process.env.PORT
+httpServer.listen(PORT, () => {
+  debug(`🚀 AnkiChampion server ready at http://localhost:${PORT}`)
+})
 
-export default app
+// export default app
+
+// if (process.env.NODE_ENV !== 'production') {
+//   const PORT = process.env.PORT || 9099
+//   app.listen(PORT, () => {
+//     console.log(`🚀 Server ready at http://localhost:${PORT}`)
+//   })
+// }
+
 
 
 

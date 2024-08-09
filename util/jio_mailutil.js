@@ -56,7 +56,7 @@ const mailService = {
             if (isValidEmail(toEmailAddress) == false) throw new Error('invalid email: ' + toEmailAddress)
             //  첨부파일 넣는 법
             let options = {
-                from: '안키챔피언<no-reply-login@reviewral.com>',
+                from: '마켓플레이스<no-reply-login@reviewral.com>',
                 to: toEmailAddress,
                 subject: subject,
             }
